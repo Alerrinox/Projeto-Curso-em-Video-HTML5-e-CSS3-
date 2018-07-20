@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="_javascript/funcoes.js"></script>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>        
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+            <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="index.html">Home </a></li>
+                    <li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="Direita">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+
+                <form  method="post" id="" action="mailto:" oninput="calc_total();">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p><label for="identificacaonome">Nome:   </label><input type="text" name="identificacao-nome" id="identificacaonome" size="20" maxlength="30" placeholder="Nome completo" ></p>
+                        <p><label for="identificacaosenha">Senha:  </label><input type="password" name="identificacao-senha" id="identificacaosenha" size="8" maxlength="8" placeholder="Máx: 8 digitos"></p>
+                        <p><label for="identificacaoemail">E-mail: </label><input type="email" name="identificacao-email" id="identificacaoemail" size="20" maxlength="20" placeholder="Ex: anomynus@gmail.com"></p>
+                        <fieldset id="sexo">
+                            <legend>Sexo:</legend>
+                            <p><input type="radio" name="sexo" id="Masculino" checked="1"><label for="Masculino">Masculino</label></p>
+                            <p><input type="radio" name="sexo" id="Feminino"><label for="Feminino">Feminino</label></p>
+                        </fieldset>
+                        <p><label for="dateNascimento">Data de Nascimento: </label><input type="date" name="Nascimento" id="dateNascimento"></p>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="EnderecoLogradouro">Logradouro: </label><input type="text" name="Endereco-Logradouro" id="EnderecoLogradouro" maxlength="20"></p>
+                        <p><label for="Endereconumero">Número: </label><input type="number" min="1" max="99999" name="Endereco-numero" id="Endereconumero" maxlength="5"></p>
+                        <p><label for="Enderecoestado">Estado: </label>
+                            <select name="Endereco-estudo" id="Enderecoestado">
+                                <optgroup label=" - Região Suldeste">
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="ES">Espírito Santo</option>
+                                </optgroup>
+                                <optgroup label=" -Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="SC">Santa Catarina</option>
+                                </optgroup>
+                            </select>
+                            <p><label for="Enderecocidade">Cidade: </label><input type="text" name="Endereco-cidade" id="Enderecocidade" list="cidades"></p>
+                            <datalist id="cidades">
+                                <option>São Paulo</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Belo Horizonte</option>
+                                <option>Vitória</option>
+                            </datalist>
+                        </fieldset>
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                            <p><label id="Urgencia">Grau de Urgência:</label> Mín <input type="range" name="Urg" id="Urgencia" min="0" max="10" step="5">Máx</p>
+                            <p><label for="Mensagem">Mensagem:</label>
+                                <textarea name="CampoDeMensagem" id="Mensagem" cols="43" rows="5"></textarea>
+                            </p>
+                        </fieldset>
+                        <fieldset id="solicitacao">
+                            <legend>Quero um Google Glass</legend>
+                            <p><input type="checkbox" name="Aquisicao" id="Aquisicao-S-N"><label for="Aquisicao-S-N">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="Cor-Glass">Cor: </label><input type="color" name="CorGlass" id="Cor-Glass"></p>
+                            <p><label for="Quantidade-Glass">Quantidade:</label><input type="number" min="1" max="5" maxlength="6" name="QuantidadeGlass" id="Quantidade-Glass"></p>
+                            <p><label for="Preco-Total-Glass">Preço Total: R$</label><input type="text" name="PrecoTotalGlass" id="Preco-Total-Glass" placeholder=" Total a Pagar" readonly></p>
+                        </fieldset>
+
+                        <input type="image" src="_imagens/botao-enviar.png">
+                    </form>
+
+                </article>
+            </section>
+            <footer id="rodape">
+                <p>Copyright 2013 &copy;- by Gustavo Guanabara</p>
+                <p><a href="https://pt-br.facebook.com/CursosEmVideo/"><i id="facebook" class="fa">&#xf082;</i></a> | <a href="https://twitter.com/cursosemvideo"><i id="twitter" class="fa">&#xf081;</i></a></p>
+            </footer>
+        </div>
+    </body>
+    </html>

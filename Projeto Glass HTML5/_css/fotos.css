@@ -1,0 +1,97 @@
+@charset "UTF-8"
+ul{
+	padding: 90px;
+}
+#album-fotos {
+	width: 810px;
+	margin: auto;
+	padding: 50px;
+	overflow: hidden;
+	list-style: none;
+}
+#album-fotos li {
+	float: left;
+	width: 240px;
+	height: 240px;
+	margin: 10px;
+	border: 5px solid white;
+	background: #ffffff;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+	-webkit-transition:all 0.3s ease-in;
+}
+#album-fotos li:hover {
+	-webkit-transform:scale(1.5);
+}
+#album-fotos li#foto1{
+	background: url(../_imagens/galeria-01.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 500px 500px;
+	background-color: #ffffff; 
+}
+#album-fotos li#foto1:hover {
+	position: 0px 0px;
+	background-size: 240px 240px;
+}
+#album-fotos li#foto2 {
+	background: url(../_imagens/galeria-02.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 500px 500px;
+	background-color: #ffffff; 
+}
+#album-fotos li#foto2:hover {
+	position: 0px 0px;
+	background-size: 240px 240px;
+}
+#album-fotos li#foto3 {
+	background: url(../_imagens/galeria-03.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 500px 500px;
+	background-color: #ffffff; 
+}
+#album-fotos li#foto3:hover {
+	position: 0px 0px;
+	background-size: 240px 240px;
+}
+#album-fotos li#foto4 {
+	background: url(../_imagens/galeria-04.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 500px 500px;
+	background-color: #ffffff; 
+}
+#album-fotos li#foto4:hover {
+	position: 0px 0px;
+	background-size: 240px 240px;
+}
+#album-fotos li#foto5 {
+	background: url(../_imagens/galeria-05.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 500px 500px;
+	background-color: #ffffff; 
+}
+#album-fotos li#foto5:hover {
+	position: 0px 0px;
+	background-size: 240px 240px;
+}
+#album-fotos li#foto6 {
+	background: url(../_imagens/galeria-06.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 500px 500px;
+	background-color: #ffffff; 
+}
+#album-fotos li#foto6:hover {
+	position: 0px 0px;
+	background-size: 240px 240px;
+}
+
+li span {
+	opacity: 0;
+	color: #ffffff;
+	box-shadow: 1px 1px 1px #000000;
+	background-color: rgba(0,0,0,.3);
+	font-size: 9pt;
+	line-height: 395px;
+	padding: 5px;
+}
+li:hover span {
+	opacity: 1;
+}
